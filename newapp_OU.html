@@ -1,0 +1,200 @@
+<!DOCTYPE html><html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>NewApp</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: Arial, sans-serif;
+    }
+
+    body {
+      background: url('https://dailybetpredictionstips.data.blog/wp-content/uploads/2025/01/blurred_image_25038606269185235234.jpg?w=577') no-repeat center center/cover;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: start;
+      padding-top: 20px;
+    }
+
+    .prediction-box {
+      background: rgba(255, 255, 255, 0.1);
+      backdrop-filter: blur(100px);
+      border-radius: 50px;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      padding: 20px;
+      width: 90%;
+      max-width: 400px;
+      text-align: center;
+      color: white;
+    }
+
+    .tabs {
+      display: flex;
+      justify-content: space-around;
+      margin-bottom: 20px;
+    }
+
+    .tab {
+      cursor: pointer;
+      padding: 10px;
+      border-radius: 30px;
+      background-color: rgba(0,0,0,0);
+      color: black;
+      transition: 0.8s;
+    }
+
+    .tab:hover, .tab.active {
+      background-color: Gold;
+    }
+
+    .content-section {
+      display: none;
+      animation: fadeSlide 0.9s ease forwards;
+    }
+
+    .content-section.active {
+      display: block;
+    }
+
+    @keyframes fadeSlide {
+      from {
+        opacity: 0;
+        transform: translateY(20px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .match {
+      background: rgba(1.3, 0, 0, 1.2);
+      padding: 15px;
+      margin: 10px 0;
+      border-radius: 30px;
+    }
+
+    .match p {
+      margin: 5px 0;
+      font-size: 16px;
+      color: white;
+    }
+
+    .predicts {
+      color: gold;
+    }
+
+    .score {
+      float: right;
+      color: white;
+    }
+
+    .status-icon {
+      width: 25px;
+      vertical-align: middle;
+      margin-left: 10px;
+    }
+
+    .not-available {
+      color: red;
+      font-weight: bold;
+      margin-top: 20px;
+    }
+
+    h2 {
+      color: black;
+    }
+
+    @media (max-width: 600px) {
+      .prediction-box {
+        width: 95%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="prediction-box">
+    <div class="tabs">
+      <div class="tab" onclick="showSection('yesterday')">Yesterday</div>
+      <div class="tab active" onclick="showSection('today')">Today</div>
+      <div class="tab" onclick="showSection('tomorrow')">Tomorrow</div>
+    </div>
+
+    <div id="yesterday" class="content-section">
+      <h2>Yesterday's Predictions</h2>
+      <div class="match">
+        <p><strong>Match:</strong> Husqvarna vs Lund 
+          <span class="score">FT 2 - 1 <br><img class="status-icon" data-status="won"></span>
+        </p>
+        <p><strong>Prediction:</strong> <span class="predicts">Over 1.5 Goals</span></p>
+      </div>
+      
+      <div class="match">
+        <p><strong>Match:</strong> MyPa vs Vaajakoski
+          <span class="score">FT 4 - 3 <br><img class="status-icon" data-status="won"></span>
+        </p>
+        <p><strong>Prediction:</strong> <span class="predicts">Over 2.5 Goals</span></p>
+      </div>
+      
+      <div class="match">
+        <p><strong>Match:</strong> Wydad Ac vs Al Ain
+          <span class="score">FT 1 - 2 <br><img class="status-icon" data-status="lost"></span>
+        </p>
+        <p><strong>Prediction:</strong> <span class="predicts">Draw or Away</span></p>
+      </div>
+    </div>
+    
+    
+
+    <div id="today" class="content-section active">
+      <h2>Overs and Unders</h2>
+      <div class="match">
+        <p><strong>Match:</strong> Shamrock Rovers vs Waterford</p>
+        <p><strong>Kickoff:</strong> 7:00 PM UTC</p>
+        <p><strong>Prediction:</strong> <span class="predicts">Home</span></p>
+      </div>
+      <div class="match">
+        <p><strong>Match:</strong> Turku PS vs JaPS</p>
+        <p><strong>Kickoff:</strong> 4:30 PM UTC</p>
+        <p><strong>Prediction:</strong> <span class="predicts">Home</span></p>
+      </div>
+      <div class="match">
+        <p><strong>Match:</strong> KA Akureyi vs Valur Reykjavik</p>
+        <p><strong>Kickoff:</strong> 6:30 PM UTC</p>
+        <p><strong>Prediction:</strong> <span class="predicts">Draw or Away</span></p>
+      </div>
+    </div>
+
+    <div id="tomorrow" class="content-section">
+      <p class="not-available">Not available right now</p>
+    </div>
+  </div>
+
+  <script>
+    const tabs = document.querySelectorAll('.tab');
+    const sections = document.querySelectorAll('.content-section');
+
+    function showSection(id) {
+      sections.forEach(section => section.classList.remove('active'));
+      document.getElementById(id).classList.add('active');
+      tabs.forEach(tab => tab.classList.remove('active'));
+      document.querySelector(`.tab[onclick*="${id}"]`).classList.add('active');
+    }
+
+    const statusImages = {
+      won: "https://dailybetpredictionstips.data.blog/wp-content/uploads/2025/03/20250322_235418341582741951406066.png?w=1024",
+      lost: "https://dailybetpredictionstips.data.blog/wp-content/uploads/2025/05/20250528_1704356393565164789567555.png?w=1024"
+    };
+
+    document.querySelectorAll('.status-icon').forEach(img => {
+      const status = img.getAttribute('data-status');
+      img.src = statusImages[status] || '';
+      img.alt = status;
+    });
+  </script>
+</body>
+</html>

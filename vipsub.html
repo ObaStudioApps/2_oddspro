@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Secure Prediction Access</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+
+        /* Background */
+        body {
+            background: url('https://dailybetpredictionstips.data.blog/wp-content/uploads/2025/01/blurred_image_25038606269185235234.jpg?w=577') no-repeat center center/cover;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+        }
+
+        /* Main Box */
+        .main-box {
+            background: rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(20px);
+            border-radius: 15px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            width: 90%;
+            max-width: 400px;
+            text-align: center;
+            color: white;
+        }
+
+        /* Email Input */
+        .email-box {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            text-align: center;
+        }
+
+        /* Unlock Button */
+        .unlock-btn {
+            margin-top: 10px;
+            padding: 10px;
+            width: 100%;
+            border: none;
+            border-radius: 5px;
+            background: #28a745;
+            color: white;
+            font-size: 16px;
+            cursor: pointer;
+            transition: background 0.3s, transform 0.2s;
+        }
+
+        .unlock-btn:hover {
+            background: #218838;
+            transform: scale(1.05);
+        }
+
+        /* Hidden Prediction Box */
+        .hidden-box {
+            margin-top: 20px;
+            padding: 15px;
+            background: rgba(0, 0, 0, 0.6);
+            border-radius: 10px;
+            display: none;
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.5s ease, transform 0.5s ease;
+        }
+
+        /* Show Animation */
+        .show {
+            display: block;
+            opacity: 1;
+            transform: scale(1);
+            animation: fadeIn 1.5s ease-in-out;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: scale(0.8); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        /* Modern Access Denied */
+        .access-denied {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: rgba(255, 0, 0, 0.9);
+            color: white;
+            padding: 20px;
+            border-radius: 20px;
+            font-size: 14px;
+            font-weight: bold;
+            text-align: center;
+            animation: shake 2.0s ease-in-out;
+            box-shadow: 0 0 15px rgba(255, 0, 0, 0.7);
+        }
+
+        @keyframes shake {
+            0% { transform: translate(-50%, -50%) rotate(0deg); }
+            25% { transform: translate(-52%, -48%) rotate(-3deg); }
+            50% { transform: translate(-50%, -50%) rotate(3deg); }
+            75% { transform: translate(-48%, -52%) rotate(-3deg); }
+            100% { transform: translate(-50%, -50%) rotate(0deg); }
+        }
+
+        /* Subscription Countdown */
+        .countdown {
+            margin-top: 10px;
+            font-size: 14px;
+            color: #ffcc00;
+        }
+
+        /* Match Time */
+        #matchTime {
+            font-weight: bold;
+            color: #00d4ff;
+        }
+    
+    .vippicks {margin: 20px 0 20px 0;
+    }
+
+    .subsButton {margin-top: 5px;
+        position: relative;
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 18px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: white;
+            background: linear-gradient(45deg, #FF5733, #FF914D);
+            border-radius: 8px;
+            cursor: pointer;
+            overflow: hidden;
+            border: none;
+            width: 85%;
+            margin-top: 10px;
+            box-shadow: 0px 4px 10px rgba(255, 87, 51, 0.5);
+            transition: transform 0.2s, box-shadow 0.2s;
+    }
+    
+     .subsButton2 {margin-top: 5px;
+        position: relative;
+            display: inline-block;
+            padding: 15px 25px;
+            font-size: 12px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            color: black;
+            background: linear-gradient(45deg, #f1c40f, #f1c40f);
+            border-radius: 8px;
+            cursor: pointer;
+            overflow: hidden;
+            border: none;
+            width: 85%;
+            margin-top: 10px;
+            box-shadow: 0px 1px 5px rgba(255, 87, 51, 0.5);
+            transition: transform 0.2s, box-shadow 0.2s;
+     }
+    
+    .active {
+        font-size: 11px;
+        color: #000000;
+        margin-top: 5px;
+    } 
+    
+    .sub {
+     margin-top: 25px;  
+     margin-buttom: 2px;
+     font-size: 12px;
+    }        
+    
+    </style>
+</head>
+<body>
+
+    <div class="main-box">
+        <h2>Unlock Vip Prediction</h2>
+        <input type="email" id="emailInput" class="email-box" placeholder="Enter your email">
+        <p class="active">Active Subscribers: <strong>191</strong></p>
+        <button class="unlock-btn" onclick="unlockPrediction()">Unlock Predictions</button>
+        <p class="sub">If you don't have an account<br>Click <strong>SUBSCRIBE NOW</strong>👇🏻 and get <strong>30 days</strong> access to our daily vip expert picks</p>
+        <a href="https://obastudioapps.github.io/Vip-payment-portal/" class="subsButton">JOIN VIP MEMBERS TODAY</a>
+        <a href="https://obastudioapps.github.io/Vip-payment-portal/binanceonly.html" class="subsButton2">SUBSCRIBE USING BINANCE (USDT)</a>
+
+        <!-- Hidden Prediction Box -->
+        <div id="predictionBox" class="hidden-box">
+            <h2 style="color: #ffcc00;">Day 31</h2>
+            <h4 style="color: #ffcc00;">June-30-2025</h4>
+            
+            <div class="vippicks">
+            <p><strong>Match:</strong> Brann vs Sandejjord</p>
+            <p><strong>Kickoff:</strong> 5:00 PM UTC</p>
+            <p><strong>Prediction:</strong> 1st Half Away Clean Sheet(No)</p>
+            </div>
+            
+            <div class="vippicks">
+            <p><strong>Match:</strong> Djurgarden vs Norrkoping</p>
+            <p><strong>Kickoff:</strong> 6:00 PM UTC</p>
+            <p><strong>Prediction:</strong> Home or Draw</p>
+            </div>
+            
+           
+            <div class="countdown" id="countdown"></div>
+            
+        </div>
+    </div>
+
+    <!-- Modern Access Denied Message -->
+    <div id="accessDenied" class="access-denied">
+        ❌ Access Denied! Your email is not authorized.
+        Subscribe now to get Access.
+    </div>
+
+    <script>
+        function adjustMatchTime() {
+            let matchTimeUTC = new Date(Date.UTC(2025, 1, 30, 20, 0, 0)); // Example: Feb 30, 2025, 20:00 UTC
+            let userTimeZone = Intl.DateTimeFormat().resolvedOptions().timeZone;
+            let localMatchTime = matchTimeUTC.toLocaleString("en-US", { timeZone: userTimeZone, hour: '2-digit', minute: '2-digit', hour12: true });
+
+            document.getElementById("matchTime").innerText = localMatchTime;
+        }
+
+        function unlockPrediction() {
+            let approvedEmails = ["admin.gh@gmail.com","faswani430@gmail.com","cezarbervens@gmail.com",];
+            let email = document.getElementById("emailInput").value.trim();
+            let predictionBox = document.getElementById("predictionBox");
+            let countdownElement = document.getElementById("countdown");
+            let accessDenied = document.getElementById("accessDenied");
+
+            let now = Date.now();
+            let storedTime = localStorage.getItem(email + "_expiry") || 0;
+
+            if (storedTime > 0 && now > storedTime) {
+                localStorage.removeItem(email + "_expiry");
+                storedTime = 0;
+            }
+
+            if (approvedEmails.includes(email)) {
+                if (storedTime == 0) {
+                    let expiryTime = now + (30 * 24 * 60 * 60 * 1000);
+                    localStorage.setItem(email + "_expiry", expiryTime);
+                    storedTime = expiryTime;
+                }
+
+                predictionBox.classList.add("show");
+
+                function updateCountdown() {
+                    let timeLeft = storedTime - Date.now();
+                    if (timeLeft <= 0) {
+                        countdownElement.innerHTML = "Subscription Expired!";
+                        localStorage.removeItem(email + "_expiry");
+                    } else {
+                        let days = Math.floor(timeLeft / (1000 * 60 * 60 * 24));
+                        let hours = Math.floor((timeLeft % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+                        let minutes = Math.floor((timeLeft % (1000 * 60 * 60)) / (1000 * 60));
+                        countdownElement.innerHTML = `Subscription Expires in: ${days}d ${hours}h ${minutes}m`;
+                    }
+                }
+
+                updateCountdown();
+                setInterval(updateCountdown, 60000);
+
+                setTimeout(() => {
+                    predictionBox.classList.remove("show");
+                }, 70000);
+            } else {
+                accessDenied.style.display = "block";
+                setTimeout(() => {
+                    accessDenied.style.display = "none";
+                }, 5000);
+            }
+        }
+
+        adjustMatchTime(); // Call function to set match time based on user's timezone
+    </script>
+
+</body>
+</html>

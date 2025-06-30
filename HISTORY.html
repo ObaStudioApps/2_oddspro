@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sports Match Results</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #121212;
+            color: white;
+            text-align: center;
+            margin: 0;
+            padding: 20px;
+        }
+        .container {
+            max-width: 600px;
+            margin: auto;
+            background: #222;
+            padding: 10px;
+            border-radius: 20px;
+            box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.2);
+        }
+        h2 {
+            color: #ffcc00;
+        }
+        .match {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 3px;
+            border-bottom: 1px solid #444;
+            font-size: 2px;
+        }
+        .result img {
+            width: 11px;
+            height: 11px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>JUNE 2025 - VIP HISTORY</h2>
+
+        <div id="match-results"></div>
+    </div>
+
+    <script>
+        // Match results (Editable)
+        let matchData = [
+            { day: "Day 1", result: "no" },
+            { day: "Day 2", result: "yes" },
+            { day: "Day 3", result: "yes" },
+            { day: "Day 4", result: "yes" },
+            { day: "Day 5", result: "no" },
+            { day: "Day 6", result: "yes" },
+            { day: "Day 7", result: "refund" },
+            { day: "Day 8", result: "yes" },
+            { day: "Day 9", result: "no" },
+            { day: "Day 10", result: "no" },
+            { day: "Day 11", result: "yes" },
+            { day: "Day 12", result: "refund" },
+            { day: "Day 13", result: "yes" },
+            { day: "Day 14", result: "no" },
+            { day: "Day 15", result: "no" },
+            { day: "Day 16", result: "refund" },
+            { day: "Day 17", result: "yes" },
+            { day: "Day 18", result: "yes" },
+            { day: "Day 19", result: "no" },
+            { day: "Day 20", result: "no" },
+            { day: "Day 21", result: "yes" },
+            { day: "Day 22", result: "no" },
+            { day: "Day 23", result: "yes" },
+            { day: "Day 24", result: "refund" },
+            { day: "Day 25", result: "yes" },
+            { day: "Day 26", result: "yes" },
+            { day: "Day 27", result: "no" },
+            { day: "Day 28", result: "none" },
+    
+            
+    
+    
+            
+    
+         
+        ];
+
+        let resultContainer = document.getElementById("match-results");
+
+        // Image links
+        const images = {
+            yes: "https://dailybetpredictionstips.data.blog/wp-content/uploads/2025/03/20250322_235418341582741951406066.png?w=1024",
+            no: "https://dailybetpredictionstips.data.blog/wp-content/uploads/2025/05/20250528_1704356393565164789567555.png?w=1024",
+            refund: "https://dailybetpredictionstips.data.blog/wp-content/uploads/2025/03/20250323_0003411203370335536992773.png?w=1024"
+        };
+
+        // Render match results
+        matchData.forEach(match => {
+            let matchDiv = document.createElement("div");
+            matchDiv.className = "match";
+            matchDiv.innerHTML = `
+                <span>${match.day}</span>
+                <span class="result">
+                    ${match.result === "none" ? "Match In Progress" : `<img src="${images[match.result]}" alt="${match.result}">`}
+                </span>
+            `;
+            resultContainer.appendChild(matchDiv);
+        });
+    </script>
+
+</body>
+</html>
