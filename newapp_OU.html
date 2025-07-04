@@ -2,7 +2,7 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>NewApp</title>
+  <title>Match Predictions</title>
   <style>
     * {
       margin: 0;
@@ -12,19 +12,18 @@
     }
 
     body {
-      background: url('https://dailybetpredictionstips.data.blog/wp-content/uploads/2025/01/blurred_image_25038606269185235234.jpg?w=577') no-repeat center center/cover;
+      background-color: #1f1f1f; /* App-style dark background */
       height: 100vh;
       display: flex;
       justify-content: center;
       align-items: start;
-      padding-top: 70px;
+      padding-top: 100px;
     }
 
     .prediction-box {
-      background: rgba(255, 255, 255, 0.1);
-      backdrop-filter: blur(20px);
-      border-radius: 50px;
-      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+      background: linear-gradient(to bottom right, #ff9900, #ff6600); /* Orange gradient */
+      border-radius: 40px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
       padding: 20px;
       width: 90%;
       max-width: 400px;
@@ -40,15 +39,16 @@
 
     .tab {
       cursor: pointer;
-      padding: 10px;
-      border-radius: 30px;
-      background-color: rgba(0,0,0,0);
-      color: gray;
-      transition: 0.8s;
+      padding: 10px 16px;
+      border-radius: 25px;
+      background-color: rgba(0, 0, 0, 0.1);
+      color: white;
+      font-weight: bold;
+      transition: 0.3s;
     }
 
     .tab:hover, .tab.active {
-      background-color: #fff;
+      background-color: #ffffff22;
     }
 
     .content-section {
@@ -72,31 +72,38 @@
     }
 
     .match {
-      background: rgba(1.3, 0, 0, 1.2);
+      background-color: rgba(255, 255, 255, 0.25);
       padding: 15px;
       margin: 10px 0;
-      border-radius: 30px;
+      border-radius: 25px;
     }
 
     .match p {
       margin: 5px 0;
       font-size: 16px;
-      color: white;
+      color: #ffffff;
     }
 
     .predicts {
-      color: #fff;
+      color: yellow;
+      font-weight: bold;
     }
 
     .score {
       float: right;
+      text-align: right;
+    }
+
+    .score span {
+      display: block;
       color: white;
+      font-size: 14px;
     }
 
     .status-icon {
       width: 25px;
       vertical-align: middle;
-      margin-left: 10px;
+      display: inline-block;
     }
 
     .not-available {
@@ -106,7 +113,7 @@
     }
 
     h2 {
-      color: black;
+      color: #ffffff;
     }
 
     @media (max-width: 600px) {
@@ -127,45 +134,55 @@
     <div id="yesterday" class="content-section">
       <h2>Yesterday's Predictions</h2>
       <div class="match">
-        <p><strong>Match:</strong> Husqvarna vs Lund 
-          <span class="score">FT 2 - 1 <br><img class="status-icon" data-status="won"></span>
+        <p>
+          <strong>Match:</strong> KaPa vs Turku PS 
+          <span class="score">
+            <span>FT 4 - 2</span>
+            <img class="status-icon" data-status="lost">
+          </span>
         </p>
-        <p><strong>Prediction:</strong> <span class="predicts">Over 1.5 Goals</span></p>
+        <p><strong>Prediction:</strong> <span class="predicts">Away</span></p>
       </div>
       
       <div class="match">
-        <p><strong>Match:</strong> MyPa vs Vaajakoski
-          <span class="score">FT 4 - 3 <br><img class="status-icon" data-status="won"></span>
+        <p>
+          <strong>Match:</strong> Spain W vs Portugal W
+          <span class="score">
+            <span>FT 5 - 0</span>
+            <img class="status-icon" data-status="won">
+          </span>
         </p>
         <p><strong>Prediction:</strong> <span class="predicts">Over 2.5 Goals</span></p>
       </div>
       
       <div class="match">
-        <p><strong>Match:</strong> Wydad Ac vs Al Ain
-          <span class="score">FT 1 - 2 <br><img class="status-icon" data-status="lost"></span>
+        <p>
+          <strong>Match:</strong> Aftureldimg vs Breidablik
+          <span class="score">
+            <span>FT 2 - 2</span>
+            <img class="status-icon" data-status="won">
+          </span>
         </p>
         <p><strong>Prediction:</strong> <span class="predicts">Draw or Away</span></p>
       </div>
     </div>
-    
-    
 
     <div id="today" class="content-section active">
-      <h2>Overs and Unders</h2>
+      <h2>Today's Predictions</h2>
       <div class="match">
-        <p><strong>Match:</strong> Shamrock Rovers vs Waterford</p>
-        <p><strong>Kickoff:</strong> 7:00 PM UTC</p>
-        <p><strong>Prediction:</strong> <span class="predicts">Home</span></p>
+        <p><strong>Match:</strong> Fakel Youth vs Krasnodar</p>
+        <p><strong>Kickoff:</strong> 2:00 PM UTC</p>
+        <p><strong>Prediction:</strong> <span class="predicts">Away</span></p>
       </div>
       <div class="match">
-        <p><strong>Match:</strong> Turku PS vs JaPS</p>
-        <p><strong>Kickoff:</strong> 4:30 PM UTC</p>
-        <p><strong>Prediction:</strong> <span class="predicts">Home</span></p>
+        <p><strong>Match:</strong> Paide vs Levadia Tallin</p>
+        <p><strong>Kickoff:</strong> 4:00 PM UTC</p>
+        <p><strong>Prediction:</strong> <span class="predicts">Over 1.5 Goals</span></p>
       </div>
       <div class="match">
-        <p><strong>Match:</strong> KA Akureyi vs Valur Reykjavik</p>
-        <p><strong>Kickoff:</strong> 6:30 PM UTC</p>
-        <p><strong>Prediction:</strong> <span class="predicts">Draw or Away</span></p>
+        <p><strong>Match:</strong> Denmark W vs Sweden W</p>
+        <p><strong>Kickoff:</strong> 4:00 PM UTC</p>
+        <p><strong>Prediction:</strong> <span class="predicts">Over 1.5 Goals</span></p>
       </div>
     </div>
 
