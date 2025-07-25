@@ -26,6 +26,7 @@ All predictions are updated regularly, and access is secure and time-limited bas
 - Access is delivered manually via email after payment is confirmed.
 - VIP users get exclusive access to premium tips and content through the app interface.
 - This GitHub repository contains the hosted interface used to support the delivery and display of daily tips.
+- 🌐 Live App Page: https://obastudioapps.github.io/2_oddspro/vipsub.html
 
 ---
 
